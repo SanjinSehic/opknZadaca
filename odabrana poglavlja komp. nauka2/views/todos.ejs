@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+</head>
+<body>
+
+   <h1>todos</h1> 
+   <ul>
+        <% todos.forEach(function(t){ %>
+            <li>
+                <%= t %>
+            </li>
+          <% }); %>
+   </ul>
+    <form action="/todos/add" method="POST">
+        <input type="text" name="todo" id="">
+        <input type="submit" value="dodaj">
+
+    </form>
+    <a href="/logout">logout</a>
+</body>
+</html>
