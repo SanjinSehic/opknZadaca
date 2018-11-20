@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+    <style>
+        .deleteButton {
+            margin-left: 20px;
+        }
+    </style>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+   <h1>todos</h1> 
+   <ul>
+        <% todos.forEach(function(t){ %>
+            <li>
+                <%= t.todo %><button class="deleteButton" onclick="deleteTodo('<%= t.todo %>')">delete </button>
+            </li>
+          <% }); %>
+   </ul>
+    <form action="/todos/add" method="POST">
+        <input type="text" name="todo" id="">
+        <input type="submit" value="dodaj">
+
+    </form>
+    <a href="/logout">logout</a>
+    <script src="javascripts/deleteTodo.js"></script>
+</body>
+</html>
