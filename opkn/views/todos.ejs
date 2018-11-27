@@ -14,11 +14,16 @@
 
    <h1>todos</h1> 
    <ul>
-        <% todos.forEach(function(t){ %>
+       <% if(todos1) { %>
+        <% todos1.todos.forEach(function(t){ %>
             <li>
                 <%= t.todo %><button class="deleteButton" onclick="deleteTodo('<%= t.todo %>')">delete </button>
             </li>
           <% }); %>
+       <% } %>
+       <% if(!todos1) { %>
+            <h1>No todos</h1>
+        <% } %>
    </ul>
     <form action="/todos/add" method="POST">
         <input type="text" name="todo" id="">

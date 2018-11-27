@@ -1,4 +1,4 @@
-const sqlite3 = require('sqlite3').verbose();
+/*const sqlite3 = require('sqlite3').verbose();
 
 var db = new sqlite3.Database('./opkn.db',sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
@@ -6,4 +6,4 @@ var db = new sqlite3.Database('./opkn.db',sqlite3.OPEN_READWRITE, (err) => {
   }
   console.log('Connected to the opkn database.');
 });
-module.exports = db;
+module.exports = db;*/
